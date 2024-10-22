@@ -16,9 +16,14 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 const gltfLoader = new GLTFLoader();
-gltfLoader.load('/models/Duck/glTF/Duck.gltf', (gltf)=> {
+gltfLoader.load('/models/FlightHelmet/glTF/FlightHelmet.gltf', (gltf)=> {
     console.log(gltf);
-    
+   
+    const children = [...gltf.scene.children];
+
+    for(const child of children){
+        scene.add(child)
+    }
 })
 
 /**
