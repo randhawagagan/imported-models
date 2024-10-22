@@ -16,6 +16,10 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 const gltfLoader = new GLTFLoader();
+gltfLoader.load('/models/Duck/glTF/Duck.gltf', (gltf)=> {
+    console.log(gltf);
+    
+})
 
 /**
  * Floor
